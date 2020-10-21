@@ -70,6 +70,24 @@ $(document).ready(function () {
 
         },
     ];
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+        window.location.href='https://gentryhunt23.github.io/Gentry-Unit-2-HW/';
+
+    }
+
     function startTimer(duration, display) {
         var timer = duration, minutes, seconds;
         setInterval(function () {
@@ -120,15 +138,32 @@ $(document).ready(function () {
             } else {
                 $('#checkAnswer').html(`<div class="alert alert-danger" role="alert">Incorrect</div>`);
             }
+            if (quizQuestions[currentQuestion].number === 10 && score >= 7) {
+                modal.style.display = "block";
+                modalImg.src = img.src;
+                captionText.innerHTML = img.alt;
+
+                window.close()
+            } else if (quizQuestions[currentQuestion].number === 10 && score < 7) {
+                var tryAgain = confirm(`Quiz Complete! Your Final Score is: ${score}! Try Again ?`)
+
+            }
+            if (tryAgain === true) {
+                location.reload()
+            } else {
+                window.close()
+            }
         });
     }
     startQuiz();
     checkAnswer();
     nextQuestion();
-    var leaderBoard = function () {
-        if (timer === duration) {
-            alert('times up');
-        }
-    }
-    leaderBoard();
+    // var leaderBoard = function () {
+    //     if (timer === duration) {
+    //         alert('times up');
+    //     }
+    // }
+    // leaderBoard();
+
+
 });
