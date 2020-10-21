@@ -71,21 +71,29 @@ $(document).ready(function () {
         },
     ];
     var modal = document.getElementById("myModal");
+    var modal2 = document.getElementById("myModal-2");
 
     // Get the image and insert it inside the modal - use its "alt" text as a caption
     var img = document.getElementById("myImg");
     var modalImg = document.getElementById("img01");
     var captionText = document.getElementById("caption");
-
+   
+    var img2 = document.getElementById("myImg-2");
+    var modalImg2 = document.getElementById("img02");
+    var captionText2 = document.getElementById("caption-2");
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
+    var span2 = document.getElementsByClassName("close")[1];
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
         modal.style.display = "none";
         window.location.href='https://gentryhunt23.github.io/Gentry-Unit-2-HW/';
-
+    }
+    span2.onclick = function () {
+        modal2.style.display = "none";
+        location.reload();
     }
 
     function startTimer(duration, display) {
@@ -142,28 +150,25 @@ $(document).ready(function () {
                 modal.style.display = "block";
                 modalImg.src = img.src;
                 captionText.innerHTML = img.alt;
-
-                window.close()
+                $(timer).hide();
             } else if (quizQuestions[currentQuestion].number === 10 && score < 7) {
-                var tryAgain = confirm(`Quiz Complete! Your Final Score is: ${score}! Try Again ?`)
+                modal2.style.display = "block";
+                modalImg2.src = img2.src;
+                captionText2.innerHTML = img2.alt;
+                $(timer).hide();
+            }
 
-            }
-            if (tryAgain === true) {
-                location.reload()
-            } else {
-                window.close()
-            }
         });
     }
     startQuiz();
     checkAnswer();
     nextQuestion();
-    // var leaderBoard = function () {
-    //     if (timer === duration) {
-    //         alert('times up');
-    //     }
-    // }
-    // leaderBoard();
-
+    var leaderBoard = function () {
+        if (timer === duration) {
+            alert('times up');
+            location.reload();
+        }
+    }
+    leaderBoard();
 
 });
