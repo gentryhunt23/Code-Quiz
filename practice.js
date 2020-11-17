@@ -89,7 +89,7 @@ $(document).ready(function () {
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
         modal.style.display = "none";
-        window.location.href='https://gentryhunt23.github.io/Gentry-Porfolio/';
+        window.location.href='https://gentryhunt23.github.io/Gentry-Portfolio/';
     }
     span2.onclick = function () {
         modal2.style.display = "none";
