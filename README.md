@@ -1,3 +1,9 @@
-# Gentry-Unit-4HW
+Code Quiz
 
-This appliaction is functioning code quiz that consists of 10 questions. each question has options and a correct answer. when th user chooses answers correctly their score will increase by 1. when the user answers incorrectly, their time will deplete. The users final score will be logged at the completion of the quiz with their initials. 
+"Code Quiz" is a functioning front end application that contains 10 code related questions for a user to test very elementary javascript coding knowledges for a user. The code quiz is a fun and interactive waay for a user to answer 10 questions with the hopes of answering all questions correctly. The quiz and timer begin upon click of the start button after reading the directions to the quiz.
+
+Every question has 3 possible answers choices that are dynamically populated using a for loop and jQuery commands  to append the answer choices to the screen in the form of click buttons. For every answer that the user selects, the user will receive a bootstrap alert that notifies if the answer is either correct or incorrect with a red or green banner depending on the choice selected. The application keeps the user's "score" by incrementng by 1 for every correct answer. After the answer is selected by the user, the next question automatically prompts the user to answer. 
+
+The application also has a timer that is set to 5 minutes. The quiz shoukd not take the user the entire 5 minutes but in the event that the timer exoires, the user will receive an alert that the time is up. Upon completion of the quiz the user will eithe receive one of two modals depending on the number of correct answers given for the quiz. If the user has answered a minimum of 7 out of 10 answers correctly, the user will be prompted with a "winning" screen that will redirect the user to my personal project portfolio landing page upon exiting the modal. If the user answers less than 7 questions correctly, the user will be directed back to the beginning of the screen upon closing the "losing" modal. 
+
+The technologies used for this front end application are HTML5, CSS3, Javascript, JQuery, and Bootstrap. 
