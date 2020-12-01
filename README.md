@@ -1,6 +1,6 @@
 Code Quiz
 
-"Code Quiz" is a functioning front end application that contains 10 code related questions for a user to test very elementary javascript coding knowledges for a user. The code quiz is a fun and interactive waay for a user to answer 10 questions with the hopes of answering all questions correctly. The quiz and timer begin upon click of the start button after reading the directions to the quiz.
+"Code Quiz" is a functioning front end application that contains 10 code related questions for a user to test very elementary javascript coding knowledges for a user. The code quiz is a fun and interactive way for a user to answer 10 questions with the hopes of answering all questions correctly. The quiz and timer begin upon click of the start button after reading the directions to the quiz.
 
 Every question has 3 possible answers choices that are dynamically populated using a for loop and jQuery commands  to append the answer choices to the screen in the form of click buttons. For every answer that the user selects, the user will receive a bootstrap alert that notifies if the answer is either correct or incorrect with a red or green banner depending on the choice selected. The application keeps the user's "score" by incrementng by 1 for every correct answer. After the answer is selected by the user, the next question automatically prompts the user to answer. 
 
